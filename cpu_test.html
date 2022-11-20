@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>8080 wip</title>
+    </head>
+    <body>
+
+        <br>Custom File <input type="file" id="file_input">
+        <button onclick="run_test()">Run Full Program</button>
+        <button onclick="one_step()">One Step</button><br>
+        <button onclick="stop()">Stop</button>
+
+        <br>Enable debug: <input type="checkbox" id="enable_debug"> 
+	<hr>
+	<select name="rom" id="rom_select">
+		<option value="roms/8080EXER.COM">8080EXER.COM</option>
+		<option value="roms/8080EXM.COM">8080EXM.COM</option>
+		<option value="roms/8080PRE.COM">8080PRE.COM</option>
+		<option value="roms/CPUTEST.COM">CPUTEST.COM</option>
+		<option value="roms/TST8080.COM">TST8080.COM</option>
+	</select>
+        <button onClick="run_example_full()">Example Automatic Full</button>
+        <button onclick="run_example()">Example Automatic Until Set Stop</button>
+        Run to step: <input id="stop_at" value="9999999">
+        <div id="current_state">
+            <table border="2">
+                <tr>
+                    <td>A</td>
+                    <td id="regA"></td>
+                    <td>F</td>
+                    <td id="regF"></td>
+                </tr>
+
+                <tr>
+                    <td>B</td>
+                    <td id="regB"></td>
+                    <td>C</td>
+                    <td id="regC"></td>
+                </tr>
+
+                <tr>
+                    <td>D</td>
+                    <td id="regD"></td>
+                    <td>E</td>
+                    <td id="regE"></td>
+                </tr>
+
+                <tr>
+                    <td>H</td>
+                    <td id="regH"></td>
+                    <td>F</td>
+                    <td id="regL"></td>
+                </tr>
+
+                <tr>
+                    <td>HL</td>
+                    <td id="regHL"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">PC</td>
+                    <td colspan="2" id="regPC"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">SP</td>
+                    <td colspan="2" id="regSP"></td>
+                </tr>
+            </table>
+            <table border="2">
+                <tr>
+                    <td>S</td>
+                    <td>Z</td>
+                    <td>0</td>
+                    <td>A</td>
+                    <td>0</td>
+                    <td>P</td>
+                    <td>1</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td id="flagS">0</td>
+                    <td id="flagZ">0</td>
+                    <td >0</td>
+                    <td id="flagA">0</td>
+                    <td >0</td>
+                    <td id="flagP">0</td>
+                    <td >1</td>
+                    <td id="flagC">0</td>
+                </tr>
+            </table>
+        </div>
+        <div id="last_state">
+
+        </div>
+
+        <textarea id="stdo" cols="32" rows="32"></textarea>
+        <br>
+        <input id="stdi">
+        <textarea id="output"></textarea>
+        <script src="8080_cpu_tests_full.js"></script>
+    </body>
+</html>
