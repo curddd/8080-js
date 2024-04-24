@@ -103,23 +103,23 @@ flags.CARRY = 0;
 
 
 var regs = {};
-let sAF = new SharedArrayBuffer(2);
+let sAF = new ArrayBuffer(2);
 regs.AF = new Uint16Array(sAF);
 regs.A = new Uint8Array(sAF,1,1);
 regs.F = new Uint8Array(sAF,0,1);
 
 
-let sBC = new SharedArrayBuffer(2);
+let sBC = new ArrayBuffer(2);
 regs.BC = new Uint16Array(sBC)
 regs.B = new Uint8Array(sBC,1,1);
 regs.C = new Uint8Array(sBC,0,1);
 
-let sDE = new SharedArrayBuffer(2);
+let sDE = new ArrayBuffer(2);
 regs.DE = new Uint16Array(sDE);
 regs.D = new Uint8Array(sDE,1,1);
 regs.E = new Uint8Array(sDE,0,1);
 
-let sHL = new SharedArrayBuffer(2);
+let sHL = new ArrayBuffer(2);
 regs.HL = new Uint16Array(sHL);
 regs.H = new Uint8Array(sHL,1,1);
 regs.L = new Uint8Array(sHL,0,1);

@@ -1,6 +1,6 @@
 //I havea a stack that goes up as bytes get added<br>
 //SP always point to next "empty" position to write to (post increase i think it called)<br> 
-var memory_shared_buffer = new SharedArrayBuffer(0x10000);
+var memory_shared_buffer = new ArrayBuffer(0x10000);
 var memory_s = new Int8Array(memory_shared_buffer);
 var memory_u = new Uint8Array(memory_shared_buffer);
 
